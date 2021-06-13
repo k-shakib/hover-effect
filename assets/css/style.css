@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+    --height:5.5rem;
+    --width: 9rem;
+}
+.container{
+    width: 90%;
+    margin: 10rem auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+.container a{
+    text-decoration: none;
+    text-align: center;
+    height: var(--height);
+    width: var(--width);
+    margin: 0.5rem;
+    border: 1px solid #aaaaaa;
+    overflow: hidden;
+    position: relative;
+    font-size: 2rem;
+    color: rgb(64, 103, 231);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+a img{
+    height: 3rem;
+}
+.container a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--width);
+    background: #aaaaaa;
+    z-index: -9;
+}
+.container a:hover span{
+    transition: 500ms;
+}
+
+/* hover effects */
+/* background in */
+a span.right{left: -102%;}
+.container a:hover .right{left: 0;}
+a span.left{left: 102%;}
+.container a:hover .left{left: 0;}
+a span.top{top: 102%;}
+.container a:hover .top{top: 0;}
+a span.bottom{top: -102%;}
+.container a:hover .bottom{top: 0;}
+
+
+/* background out */
+.container a:hover .right_o{left: -102%;}
+.container a:hover .left_o{left: 102%;}
+.container a:hover .top_o{top: 102%;}
+.container a:hover .bottom_o{top: -102%;}
